@@ -11,6 +11,7 @@ $INSTALL/install_or_skip.sh "sudo apt-get install -y wget" "wget"
 $INSTALL/install_or_skip.sh "sudo apt-get install -y make" "make"
 $INSTALL/install_or_skip.sh "sudo apt-get install -y autoconf" "autoconf"
 $INSTALL/install_or_skip.sh "sudo apt-get install -y automake" "automake"
+$INSTALL/install_or_skip.sh "sudo apt-get install -y cmake" "cmake"
 $INSTALL/install_or_skip.sh "sudo apt-get install -y bzip2" "bzip2"
 $INSTALL/install_or_skip.sh "sudo apt-get install -y unzip" "unzip"
 $INSTALL/install_or_skip.sh "sudo apt-get install -y zip" "zip"
@@ -31,6 +32,12 @@ else
     $INSTALL/msg.sh "'node' already exist, skip..."
 fi
 
+# neovim
+if ! type "nvim" >/dev/null 2>&1; then
+    $INSTALL/install_neovim.sh
+else
+    $INSTALL/msg.sh "'nvim' already exist, skip..."
+fi
 
 # ctags
 if ! type "ctags" >/dev/null 2>&1; then

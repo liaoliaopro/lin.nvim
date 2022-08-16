@@ -6,11 +6,13 @@ $INSTALL/msg.sh "install dependencies with pacman"
 
 sudo pacman -Syy
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S base-devel" "gcc"
+$INSTALL/install_or_skip.sh "yes | sudo pacman -S neovim" "nvim"
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S curl" "curl"
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S wget" "wget"
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S make" "make"
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S autoconf" "autoconf"
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S automake" "automake"
+$INSTALL/install_or_skip.sh "yes | sudo pacman -S cmake" "cmake"
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S unzip" "unzip"
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S zip" "zip"
 $INSTALL/install_or_skip.sh "yes | sudo pacman -S bzip2" "bzip2"

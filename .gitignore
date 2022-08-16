@@ -13,8 +13,10 @@ setting.vim
 coc-settings.json
 
 # neovim
+neovim
 init.vim
 ginit.vim
 
 # universal-ctags
 universal-ctags
+
