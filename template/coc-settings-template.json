@@ -1,0 +1,117 @@
+{
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "json",
+    "c",
+    "cpp",
+    "cmake",
+    "python",
+    "xml",
+    "html",
+    "xhtml",
+    "yaml",
+    "css",
+    "markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "rust",
+    "go"
+  ],
+  "suggest.minTriggerInputLength": 1,
+  "suggest.noselect": false,
+  "suggest.selection": "recentlyUsedByPrefix",
+  "suggest.languageSourcePriority": 99,
+  "snippets.extends": {
+    "lex": ["c", "cpp"],
+    "flex": ["c", "cpp"],
+    "yacc": ["c", "cpp"],
+    "bison": ["c", "cpp"],
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescriptreact": ["javascript", "typescript"]
+  },
+  "yank.highlight.enable": false,
+  "yank.list.maxsize": 100,
+  "yank.priority": 30,
+  "explorer.toggle": true,
+  "explorer.sources": [
+    {
+      "name": "file",
+      "expand": true
+    },
+    {
+      "name": "buffer",
+      "expand": true
+    }
+  ],
+  "explorer.icon.enableNerdfont": true,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.buffer.showHiddenBuffers": true,
+  "explorer.keyMappings.global": {
+    "i": false,
+
+    "<2-LeftMouse>": [
+      "expandable?",
+      ["expanded?", "collapse", "expand"],
+      "open"
+    ],
+    "o": ["wait", "expanded?", "collapse", "expand"],
+    "h": ["wait", "collapse"],
+    "l": ["wait", "expandable?", "expand", "open"],
+    "gl": ["wait", "expand:recursive"],
+    "gh": ["wait", "collapse:recursive"],
+    "<cr>": ["wait", "expandable?", "cd", "open"],
+    "<bs>": ["wait", "gotoParent"],
+
+    "e": "open:split",
+    "E": "open:vsplit",
+    "t": "open:tab",
+
+    "R": "refresh",
+
+    "a": "addFile",
+    "A": "addDirectory",
+    "r": "rename",
+    "m": "rename",
+    "d": "delete",
+    "D": "deleteForever",
+
+    "<C-x>": "cutFile",
+    "<C-c>": "copyFile",
+    "<C-v>": "pasteFile",
+    "Y": "copyFilepath",
+    "y": "copyFilename",
+
+    "s": "systemExecute",
+
+    "<esc>": "esc",
+    "?": "help",
+
+    "[c": ["wait", "markPrev:git"],
+    "]c": ["wait", "markNext:git"],
+
+    "P": "preview:content",
+    "I": "preview:labeling",
+
+    "H": "toggleHidden"
+  },
+  "clangd.arguments": [
+    "-j=20",
+    "--header-insertion=never",
+    "--background-index",
+    "--limit-references=500",
+    "--limit-results=50",
+    "--pch-storage=memory"
+  ],
+  "cmake.cmakePath": "cmake",
+  "cmake.formatter": "cmake-format",
+  "python.pythonPath": "python3",
+  "python.formatting.provider": "yapf",
+  "json.enable": true,
+  "json.format.enable": false,
+  "eslint.run": "onSave",
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.codeFolding.enable": false
+}
