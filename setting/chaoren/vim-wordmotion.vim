@@ -2,6 +2,7 @@
 " it's useful, but not compatible with most text editor behaviour
 " we map w/b to the compatible move behaviour, while use W/B to move just a
 " word when need
+
 let g:wordmotion_mappings = {
         \ 'w': 'W',
         \ 'W': 'w',
