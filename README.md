@@ -2,7 +2,7 @@
 
 This is a highly configured [neovim](https://neovim.io/) integrated tons of utilities for development, inspired by [spf13-vim](https://github.com/spf13/spf13-vim),
 
-_Forked from [lin.vim](https://github.com/linrongbin16/lin.vim), only support the latest major version of neovim for better experience and performance._
+_This project is forked from [lin.vim](https://github.com/linrongbin16/lin.vim), but only support the latest major version of neovim, drop support for vim, for better experience and performance._
 
 # Table of Contents
 
