@@ -5,22 +5,25 @@ local function trim6(s)
     return s:match'^()%s*$' and '' or s:match'^%s*(.*%S)'
 end
 local function LuaLineGitStatus()
-    local git_branch = vim.g.coc_git_status
-    if git_branch == nil or git_branch == '' then
+    local branch = vim.fn['gitbranch#name']()
+    if branch == nil or branch == '' then
         return ''
     end
-    local git_changes = vim.b.coc_git_status
-    if git_changes == nil or git_changes == '' then
-        git_changes = ''
+    local hunks = vim.fn['GitGutterGetHunkSummary']()
+    if hunks == nil then
+        hunks = ''
     end
-    return string.format('%s%s', git_branch, git_changes)
-end
-local function LuaLineCurrentFunction()
-    local function_name = vim.b.coc_current_function
-    if function_name == nil or function_name == '' then
-        return ''
+    local changes = {}
+    if hunks[1] > 0 then
+        table.insert(changes, '+' .. hunks[1])
     end
-    return string.format(' %s', function_name)
+    if hunks[2] > 0 then
+        table.insert(changes, '~' .. hunks[2])
+    end
+    if hunks[3] > 0 then
+        table.insert(changes, '-' .. hunks[3])
+    end
+    return string.format(' %s %s', branch, table.concat(changes, ' '))
 end
 local function LuaLineCocStatus()
     local coc_status = vim.fn['coc#status']()
