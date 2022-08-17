@@ -152,7 +152,7 @@ Please make sure access of below domains are available:
 >
 > - [git](https://git-scm.com/).
 > - [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
-> - [make](https://www.gnu.org/software/make/), [autoconf](https://www.gnu.org/software/autoconf/) and [automake](https://www.gnu.org/software/automake/).
+> - [make](https://www.gnu.org/software/make/), [autoconf](https://www.gnu.org/software/autoconf/), [automake](https://www.gnu.org/software/automake/) and [cmake](https://cmake.org/).
 > - [python3](https://www.python.org/) (python 2.x is not support) and some pip packages.
 > - [node.js](https://nodejs.org/) and some npm packages.
 > - [golang](https://go.dev/).
@@ -207,10 +207,10 @@ This will add both `git.exe` and linux builtin commands (such as `bash.exe`, `cp
 
 3. Install other dependencies (x64 is preferred):
 
-   - [cmake](https://cmake.org/download/): add `cmake.exe` to `$env:Path`.
    - [neovim](https://github.com/neovim/neovim/releases): add `nvim.exe`, `nvim-qt.exe` to `$env:Path`.
-   - [python3](https://www.python.org/downloads/): since python3 installer don't provide `python3.exe`, manually copy `python.exe` as `python3.exe`, then add to `$env:Path`.
    - [make-for-win32](http://gnuwin32.sourceforge.net/packages/make.htm): add `make.exe` to `$env:Path`.
+   - [cmake](https://cmake.org/download/): add `cmake.exe` to `$env:Path`.
+   - [python3](https://www.python.org/downloads/): since python3 installer don't provide `python3.exe`, manually copy `python.exe` as `python3.exe`, then add to `$env:Path`.
    - [rust](https://www.rust-lang.org/tools/install): add `rustc.exe`, `cargo.exe` to `$env:Path`.
    - [golang](https://go.dev/dl/): add `go.exe` to `$env:Path`.
    - [nodejs](https://nodejs.org/en/download/): add `node.exe`, `npm.exe` to `$env:Path`.
