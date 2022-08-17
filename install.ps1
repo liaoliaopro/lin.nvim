@@ -1,12 +1,25 @@
 #Requires -RunAsAdministrator
 
-$VIM_HOME="$env:UserProfile\.vim"
-$APPDATA_LOCAL_HOME="$env:UserProfile\AppData\Local"
-$NVIM_HOME="$APPDATA_LOCAL_HOME\nvim"
+$VIM_HOME="$env:USERPROFILE\.vim"
+$NVIM_HOME="$env:USERPROFILE\AppData\Local\nvim"
 $TEMPLATE_HOME="$VIM_HOME\template"
 
 Function Message($msg) {
     Write-Host "[lin.nvim] - $msg"
+}
+
+Function TryBackup($src) {
+    If (Test-Path $src) {
+        $target=-join($src, Get-Date -Format "yyyy-MM-dd.HH-mm-ss")
+        Message("backup $src to $target")
+        Rename-Item $src $target
+    }
+}
+
+Function TryDelete($src) {
+    If (Test-Path $src) {
+        (Get-Item $src).Delete()
+    }
 }
 
 Function InstallOrSkip($command, $target) {
@@ -44,21 +57,14 @@ Function InstallTemplates() {
 
 Function InstallVimrc() {
     Message -msg "install .vimrc for vim"
-    If (Test-Path $env:UserProfile\_vimrc) {
-        (Get-Item $env:UserProfile\_vimrc).Delete()
-    }
+    TryBackup "$env:USERPROFILE\_vimrc"
     cmd /c mklink %USERPROFILE%\_vimrc %USERPROFILE%\.vim\vimrc.vim
 }
 
 Function InstallNvimInit() {
-    Message -msg "install ~/.config/nvim and ~/.config/nvim/init.vim for neovim"
-    New-Item -ItemType Directory -Force -Path $APPDATA_LOCAL_HOME
-    If (Test-Path $NVIM_HOME\init.vim) {
-        (Get-Item $NVIM_HOME\init.vim).Delete()
-    }
-    If (Test-Path $NVIM_HOME) {
-        (Get-Item $NVIM_HOME).Delete()
-    }
+    Message -msg "install $NVIM_HOME and $NVIM_HOME\init.vim for neovim"
+    TryBackup "$NVIM_HOME"
+    TryDelete "$NVIM_HOME\init.vim"
     cmd /c mklink %USERPROFILE%\AppData\Local\nvim %USERPROFILE%\.vim
     cmd /c mklink %USERPROFILE%\AppData\Local\nvim\init.vim %USERPROFILE%\.vim\vimrc.vim
 }
