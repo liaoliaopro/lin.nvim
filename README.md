@@ -2,7 +2,7 @@
 
 This is a highly configured [neovim](https://neovim.io/) integrated tons of utilities for development, inspired by [spf13-vim](https://github.com/spf13/spf13-vim),
 
-_This project is forked from [lin.vim](https://github.com/linrongbin16/lin.vim), but only support the latest major version of neovim, drop support for vim, for better experience and performance._
+_This project is forked from [lin.vim](https://github.com/linrongbin16/lin.vim), but only support the latest major version of neovim, drop vim for better experience and performance._
 
 # Table of Contents
 
@@ -505,15 +505,14 @@ Please add plugins in `~/.vim/plugin.vim`, add settings in `~/.vim/setting.vim` 
 These language servers are installed by default:
 
 - c/c++
-- python3 (python2 is not supported)
+- python3 (python2 not supported)
 - rust
 - go
-- c#(.net)
-- powershell
+- c#
 - html/xml/markdown
 - css/sass/scss/less
 - json
-- javascript/typescript/jsx/tsx
+- js/ts/jsx/tsx
 
 # Reference
 
