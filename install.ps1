@@ -70,7 +70,7 @@ Function InstallNvimInit() {
     cmd /c mklink %USERPROFILE%\AppData\Local\nvim\init.vim %USERPROFILE%\.vim\vimrc.vim
 }
 
-Function InstallNvimPluginIfExist() {
+Function InstallNvimPlugin() {
     Message -msg "install neovim plugins"
     nvim -E -c "PlugInstall" -c "qall"
 }
@@ -89,7 +89,7 @@ Function Main() {
     InstallNvimInit
 
     # install plugins
-    InstallNvimPluginIfExist
+    InstallNvimPlugin
 }
 
 Main
