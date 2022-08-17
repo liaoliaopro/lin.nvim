@@ -35,17 +35,6 @@
   "yank.highlight.enable": false,
   "yank.list.maxsize": 100,
   "yank.priority": 30,
-  "explorer.toggle": true,
-  "explorer.sources": [
-    {
-      "name": "file",
-      "expand": true
-    },
-    {
-      "name": "buffer",
-      "expand": true
-    }
-  ],
   "clangd.arguments": [
     "-j=20",
     "--header-insertion=never",
