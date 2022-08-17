@@ -11,7 +11,7 @@ source $HOME/.vim/setting/linrongbin16/colorscheme.vim
 source $HOME/.vim/setting/romgrk/barbar.nvim.vim
 source $HOME/.vim/setting/nvim-lualine/lualine.nvim.vim
 source $HOME/.vim/setting/kyazdani42/nvim-tree.lua.vim
-" source $HOME/.vim/setting/airblade/vim-gitgutter.vim
+source $HOME/.vim/setting/airblade/vim-gitgutter.vim
 source $HOME/.vim/setting/jlanzarotta/bufexplorer.vim
 
 " Highlight

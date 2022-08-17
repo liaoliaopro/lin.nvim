@@ -2,7 +2,7 @@
 let g:python3_host_prog='python3'
 
 """ default coc extensions
-let g:coc_global_extensions = ['coc-explorer', 'coc-git', 'coc-snippets', 'coc-yank', 'coc-lists', 'coc-pyright', 'coc-clangd', 'coc-rust-analyzer', 'coc-go', 'coc-cmake', 'coc-html', 'coc-xml', 'coc-json', 'coc-css', 'coc-tsserver', '@yaegassy/coc-volar', 'coc-eslint', 'coc-prettier', 'coc-powershell']
+let g:coc_global_extensions = ['coc-snippets', 'coc-yank', 'coc-lists', 'coc-pyright', 'coc-clangd', 'coc-rust-analyzer', 'coc-go', 'coc-cmake', 'coc-html', 'coc-xml', 'coc-json', 'coc-css', 'coc-tsserver', '@yaegassy/coc-volar', 'coc-eslint', 'coc-prettier', 'coc-powershell']
 
 """ guifont
 if has("win32") || has("win64")
@@ -18,12 +18,7 @@ endif
 
 """ hotkeys
 " open/close file explorer
-if has('nvim-0.6')
-  nnoremap <F1> :<C-u>NvimTreeToggle<CR>
-else
-  " nnoremap <F1> :<C-u>Fern -keep -toggle . -drawer<CR>
-  nnoremap <F1> :<C-u>CocCommand explorer<CR>
-endif
+nnoremap <F1> :<C-u>NvimTreeToggle<CR>
 " toggle (open/close) undo tree
 nnoremap <F2> :<C-u>UndotreeToggle<CR>
 " toggle (open/close) vista

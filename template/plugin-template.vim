@@ -23,14 +23,10 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
 Plug 'sainnhe/sonokai'
 Plug 'kaicataldo/material.vim', {'branch': 'main'}
-if has('nvim-0.5')
-    Plug 'EdenEast/nightfox.nvim'
-    Plug 'folke/tokyonight.nvim', {'branch': 'main'}
-    Plug 'projekt0n/github-nvim-theme'
-endif
-if has('nvim-0.6')
-    Plug 'rebelot/kanagawa.nvim'
-endif
+Plug 'EdenEast/nightfox.nvim'
+Plug 'folke/tokyonight.nvim', {'branch': 'main'}
+Plug 'projekt0n/github-nvim-theme'
+Plug 'rebelot/kanagawa.nvim'
 
 """ Colors that not working well with tabline plugins (barbar.nvim or vim-buffet).
 """ The active and non-active tabs don't have a high-contrast difference.
@@ -39,21 +35,11 @@ endif
 " Plug 'romainl/Apprentice'
 
 " UI
-if has('nvim')
-    Plug 'kyazdani42/nvim-web-devicons'
-else
-    Plug 'ryanoasis/vim-devicons'
-endif
-if has('nvim-0.7')
-    Plug 'romgrk/barbar.nvim'
-    Plug 'lukas-reineke/indent-blankline.nvim'
-    Plug 'nvim-lualine/lualine.nvim'
-    Plug 'kyazdani42/nvim-tree.lua'
-else
-    Plug 'bagrat/vim-buffet'
-    Plug 'Yggdroot/indentLine'
-    Plug 'itchyny/lightline.vim'
-endif
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/vim-gitbranch'
 Plug 'jlanzarotta/bufexplorer'
@@ -63,7 +49,7 @@ Plug 'jlanzarotta/bufexplorer'
 
 " Highlight
 Plug 'RRethy/vim-illuminate'
-Plug 'RRethy/vim-hexokinase', {'do': has('make') ? 'make hexokinase' : 'git submodule init && git submodule update && cd hexokinase/ && go build'}
+Plug 'RRethy/vim-hexokinase', {'do': 'make hexokinase'}
 
 " Tags
 Plug 'liuchengxu/vista.vim'
@@ -96,13 +82,8 @@ Plug 'OmniSharp/omnisharp-vim'
 
 " Editing Support
 Plug 'tomtom/tcomment_vim'
-if has('nvim-0.5')
-    Plug 'phaazon/hop.nvim'
-    Plug 'windwp/nvim-autopairs'
-else
-    Plug 'easymotion/vim-easymotion'
-    Plug 'jiangmiao/auto-pairs'
-endif
+Plug 'phaazon/hop.nvim'
+Plug 'windwp/nvim-autopairs'
 Plug 'chaoren/vim-wordmotion'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-repeat'
