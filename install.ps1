@@ -6,7 +6,7 @@ $NVIM_HOME="$APPDATA_LOCAL_HOME\nvim"
 $TEMPLATE_HOME="$VIM_HOME\template"
 
 Function Message($msg) {
-    Write-Host "[lin.vim] - $msg"
+    Write-Host "[lin.nvim] - $msg"
 }
 
 Function InstallOrSkip($command, $target) {
@@ -47,7 +47,7 @@ Function InstallVimrc() {
     If (Test-Path $env:UserProfile\_vimrc) {
         (Get-Item $env:UserProfile\_vimrc).Delete()
     }
-    cmd /c mklink %USERPROFILE%\_vimrc %USERPROFILE%\.vim\lin.vim
+    cmd /c mklink %USERPROFILE%\_vimrc %USERPROFILE%\.vim\vimrc.vim
 }
 
 Function InstallNvimInit() {
@@ -60,7 +60,7 @@ Function InstallNvimInit() {
         (Get-Item $NVIM_HOME).Delete()
     }
     cmd /c mklink %USERPROFILE%\AppData\Local\nvim %USERPROFILE%\.vim
-    cmd /c mklink %USERPROFILE%\AppData\Local\nvim\init.vim %USERPROFILE%\.vim\lin.vim
+    cmd /c mklink %USERPROFILE%\AppData\Local\nvim\init.vim %USERPROFILE%\.vim\vimrc.vim
 }
 
 Function InstallNvimPluginIfExist() {

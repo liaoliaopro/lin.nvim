@@ -100,7 +100,7 @@ function install_vimrc() {
     if [ -f $HOME/.vimrc ]; then
         mv $HOME/.vimrc $HOME/.vimrc.$(date +"%Y-%m-%d.%H-%M-%S")
     fi
-    ln -s $VIM/lin.vim $HOME/.vimrc
+    ln -s $VIM/vimrc.vim $HOME/.vimrc
 }
 
 function install_nvim_init() {
@@ -113,7 +113,7 @@ function install_nvim_init() {
     if [ -f $NVIM/init.vim ]; then
         rm $NVIM/init.vim
     fi
-    ln -s $NVIM/lin.vim $NVIM/init.vim
+    ln -s $NVIM/vimrc.vim $NVIM/init.vim
 }
 
 function install_nvim_plugin() {
