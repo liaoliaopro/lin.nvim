@@ -15,6 +15,12 @@ function try_backup() {
     fi
 }
 
+function try_delete() {
+    if [ -d $1 || -f $1 ]; then
+        rm -rf $1
+    fi
+}
+
 function platform_dependency() {
     case "$OS" in
         Linux)
@@ -113,10 +119,8 @@ function install_nvim_init() {
     $INSTALL/msg.sh "install ~/.config/nvim and ~/.config/nvim/init.vim for neovim"
     mkdir -p $CONFIG
     try_backup $NVIM
+    try_delete $NVIM/init.vim
     ln -s $VIM $NVIM
-    if [ -f $NVIM/init.vim ]; then
-        rm $NVIM/init.vim
-    fi
     ln -s $NVIM/vimrc.vim $NVIM/init.vim
 }
 
