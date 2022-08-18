@@ -11,7 +11,6 @@ _This project is forked from [lin.vim](https://github.com/linrongbin16/lin.vim),
   - [Feature](#feature)
   - [Project Structure](#project-structure)
 - [Installation](#installation)
-  - [Network Access Requirements](#network-access-requirements)
   - [UNIX/Linux/MacOS](#unixlinuxmacos)
   - [Windows](#windows)
 - [User Guide](#user-guide)
@@ -34,7 +33,6 @@ _This project is forked from [lin.vim](https://github.com/linrongbin16/lin.vim),
     - [Git Search](#git-search)
     - [Other Search](#other-search)
     - [Coc.nvim Search](#coc-nvim-search)
-    - [Rg Search](#rg-search)
   - [Other Enhancements](#other-enhancements)
     - [Enhanced Copy Paste](#enhanced-copy-paste)
     - [Fast Cursor Movement](#fast-cursor-movement)
@@ -55,7 +53,7 @@ Aim to be out of box, IDE-like editing experience, high performance, light weigh
 
 Focused on and only on editing, no compile/package/debug projects, or tutorial for new vim users.
 
-Solved below issues:
+Solved these issues:
 
 - Difficulty to choose/coordinate/configure plugins: embeded a set of compatible plugins and well configured.
 - Duplicate installation on different OS and machines: all done by one line command (not on Windows for now).
@@ -135,9 +133,7 @@ Solved below issues:
 
 # Installation
 
-## Network Access Requirements
-
-Please make sure access of below domains are available:
+Before installation, please make sure access of these domains are available:
 
 - [github.com](https://github.com/).
 - [raw.githubusercontent.com](https://raw.githubusercontent.com/).
@@ -148,11 +144,11 @@ Please make sure access of below domains are available:
 
 ## UNIX/Linux/MacOS
 
-> `install.sh` will automatically install below softwares with system package managers:
+> `install.sh` will automatically install these softwares with system package managers:
 >
 > - [git](https://git-scm.com/).
 > - [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
-> - [make](https://www.gnu.org/software/make/), [autoconf](https://www.gnu.org/software/autoconf/), [automake](https://www.gnu.org/software/automake/) and [cmake](https://cmake.org/).
+> - [gcc](https://gcc.gnu.org/) for linux (macOS use Xcode/clang), [make](https://www.gnu.org/software/make/), [autoconf](https://www.gnu.org/software/autoconf/), [automake](https://www.gnu.org/software/automake/) and [cmake](https://cmake.org/).
 > - [python3](https://www.python.org/) (python 2.x is not support) and some pip packages.
 > - [node.js](https://nodejs.org/) and some npm packages.
 > - [golang](https://go.dev/).
@@ -169,7 +165,7 @@ Please make sure access of below domains are available:
 > - pacman: archlinux based linux.
 > - brew: macOS.
 >
-> Other \*NIX systems (such as gentoo, bsd, etc) are not supported yet.
+> Other \*NIX systems such as gentoo, bsd are not supported yet.
 
 For macOS please install [Xcode](https://guide.macports.org/chunked/installing.html) and [homebrew](https://brew.sh/) as pre-requirements.
 
@@ -181,11 +177,11 @@ For macOS please install [Xcode](https://guide.macports.org/chunked/installing.h
 
 > The goal of installation on windows is to install native executable file, no [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) nor [MYSY2](https://www.msys2.org/) for below reasons:
 >
-> - Native executable file has better performance, WSL/MYSY2 either use portable GNU shell or ubuntu virtual machine, which is quite slow or heavy.
-> - Supporting WSL backend mode (actually remote mode) like vscode is too heavy development work.
-> - [Git for Windows](https://git-scm.com) already contains MYSY2 and provide Unix/Linux builtin commands, we will use it directly.
+> - Native executable file has better performance, WSL use virtual machine, which is quite slow and heavy.
+> - Supporting WSL backend mode (like vscode) is too heavy development work.
+> - [Git for Windows](https://git-scm.com) already contains MYSY2 and provide Unix/Linux builtin commands, we will leverage it.
 
-1. Install [Visual Studio](https://www.visualstudio.com/) with below 3 components checked:
+1. Install [Visual Studio](https://www.visualstudio.com/) with these 3 components checked:
 
    - .NET Desktop Development
    - Visual C++ Desktop Development (Desktop development with C++)
@@ -193,7 +189,7 @@ For macOS please install [Xcode](https://guide.macports.org/chunked/installing.h
 
 ![install-windows-visual-studio.png](https://raw.githubusercontent.com/linrongbin16/lin.vim.github.io/main/screen-snapshots/install-windows-visual-studio.png)
 
-2. Install [64-bit Git for Windows Setup](https://git-scm.com/downloads) with especially below 3 options checked:
+2. Install [64-bit Git for Windows Setup](https://git-scm.com/downloads) with these 3 options checked:
 
    1. In the **Select Components** step, check **Associate .sh files to be run with Bash**.
    2. In the **Adjusting your PATH environment** step, choose **Use Git and optional Unix tools from the Command Prompt**.
@@ -217,7 +213,7 @@ This will add both `git.exe` and linux builtin commands (such as `bash.exe`, `cp
    - [universal-ctags](https://github.com/universal-ctags/ctags-win32/releases): add `ctags.exe`, `readtags.exe` to `$env:Path`.
    - [7-zip](https://www.7-zip.org/): add `7z.exe` to `$env:Path`.
 
-Install with a package manager (such as [chocolatey](https://chocolatey.org/) and [scoop](https://scoop.sh/)) could be a better choice, just make sure they're available in `$env:Path`.
+Use a package manager (such as [chocolatey](https://chocolatey.org/) and [scoop](https://scoop.sh/)) could be a better choice, just make sure they're available in `$env:Path`.
 
 4. Install [Hack NF](https://github.com/ryanoasis/nerd-fonts/releases):
 
@@ -226,7 +222,7 @@ Install with a package manager (such as [chocolatey](https://chocolatey.org/) an
    - `Hack Italic Nerd Font Complete Mono Windows Compatible.ttf`
    - `Hack Regular Nerd Font Complete Mono Windows Compatible.ttf`
 
-5. Finally run below commands in powershell:
+5. Finally run powershell commands:
 
 ```powershell
     $ git clone https://github.com/linrongbin16/lin.nvim $env:UserProfile\.vim
